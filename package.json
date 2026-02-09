@@ -1,0 +1,23 @@
+{
+  "name": "monica-ave-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Monica Ave - General Virtual Assistant & Junior Web Developer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./output.css --minify",
+    "start": "http-server . -c-1 -p 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "virtual-assistant",
+    "web-developer"
+  ],
+  "author": "Monica Ave",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}
