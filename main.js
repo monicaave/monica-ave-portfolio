@@ -76,3 +76,34 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         console.error("EmailJS Error:", error);
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const projectCards = document.querySelectorAll(".project-card");
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // 1. Remove active styling from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove("bg-gray-900", "text-white");
+                        btn.classList.add("bg-gray-100", "text-gray-600");
+                    });
+
+                    // 2. Add active styling to the clicked button
+                    button.classList.remove("bg-gray-100", "text-gray-600");
+                    button.classList.add("bg-gray-900", "text-white");
+
+                    // 3. Filter the projects
+                    const filterValue = button.getAttribute("data-filter");
+
+                    projectCards.forEach(card => {
+                        if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
+                            card.style.display = "block";
+                            // Optional: add a tiny animation class here if you want them to fade in
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });

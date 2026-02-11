@@ -305,10 +305,9 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6">
+   <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-12 animate-on-scroll">
                 <p class="text-sm text-gray-400 uppercase tracking-widest mb-3 font-medium">Portfolio</p>
                 <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">Featured <span class="text-highlight text-highlight-amber">Projects</span></h2>
                 <p class="text-gray-600 max-w-xl mx-auto mt-4"><span class="text-gray-400">&mdash;</span> A few hands-on projects that show how I approach tasks and build practical solutions <span class="text-gray-400">&mdash;</span></p>
@@ -319,11 +318,17 @@
                 </div>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <a href="#" target="_blank" class="bg-white rounded-2xl border border-gray-100 overflow-hidden card-hover animate-on-scroll block cursor-pointer group">
+            <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-900 text-white text-sm font-medium transition-colors" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 text-sm font-medium transition-colors" data-filter="web-dev">Web Development</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 text-sm font-medium transition-colors" data-filter="virtual-assist">Virtual Assistance</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
+                
+                <a href="#" target="_blank" class="project-card bg-white rounded-2xl border border-gray-100 overflow-hidden card-hover animate-on-scroll block cursor-pointer group" data-category="web-dev">
                     <div class="aspect-video bg-gray-100 relative overflow-hidden">
-                        <img src="./assets/img/Project1.png" alt="Personal Portfolio Website">
+                        <img src="./assets/img/Project1.png" alt="Personal Portfolio Website" class="object-cover w-full h-full">
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">Personal Portfolio Website</h3>
@@ -337,24 +342,40 @@
                     </div>
                 </a>
                 
-                <!-- Project 2 -->
-                <a href="https://civilserviceexamreview.infinityfree.me/" target="_blank" class="bg-white rounded-2xl border border-gray-100 overflow-hidden card-hover animate-on-scroll block cursor-pointer group">
+                <a href="https://civilserviceexamreview.infinityfree.me/" target="_blank" class="project-card bg-white rounded-2xl border border-gray-100 overflow-hidden card-hover animate-on-scroll block cursor-pointer group" data-category="web-dev">
                     <div class="aspect-video bg-gray-100 relative overflow-hidden">
-                        <img src="./assets/img/Project2.png" alt="Civil Service Exam Preparation Website">
+                        <img src="./assets/img/Project2.png" alt="Civil Service Exam Preparation Website" class="object-cover w-full h-full">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors">Civil Service Exam Preparation Web Application</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors">Civil Service Exam Prep Web App</h3>
                         <p class="text-gray-600 text-sm mb-4">A webapp that helps users prepare for the exam with practice tests and study materials.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Vanilla PHP</span>
                             <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">MySQL</span>
                             <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card bg-white rounded-2xl border border-gray-100 overflow-hidden card-hover animate-on-scroll block cursor-pointer group" data-category="virtual-assist">
+                    <div class="aspect-video bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="text-gray-400 text-center">
+                            <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span class="text-sm">Admin Operations</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Finance Dept. Management System</h3>
+                        <p class="text-gray-600 text-sm mb-4">Administrative support and system management to streamline departmental workflow and records.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Data Management</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Admin Support</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Workflow Optimization</span>
                         </div>
                     </div>
                 </a>
                 
-              
             </div>
         </div>
     </section>
