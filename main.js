@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     projectCards.forEach(card => {
                         if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
                             card.style.display = "block";
-                            // Optional: add a tiny animation class here if you want them to fade in
                         } else {
                             card.style.display = "none";
                         }
